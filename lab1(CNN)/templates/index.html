@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Recognizer</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            cursor: crosshair;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Draw a Digit</h1>
+    <canvas id="canvas" width="280" height="280"></canvas>
+    <div class="buttons">
+        <button onclick="clearCanvas()">Clear</button>
+        <button onclick="predictDigit()">Predict</button>
+    </div>
+    <p id="result"></p>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        let drawing = false;
+
+        canvas.addEventListener("mousedown", () => (drawing = true));
+        canvas.addEventListener("mouseup", () => (drawing = false));
+        canvas.addEventListener("mousemove", draw);
+
+        function draw(event) {
+            if (!drawing) return;
+            ctx.fillStyle = "black";
+            ctx.beginPath();
+            ctx.arc(event.offsetX, event.offsetY, 8, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function clearCanvas() {
+            ctx.fillStyle = "white";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            document.getElementById("result").textContent = "";
+        }
+
+        function predictDigit() {
+            const image = canvas.toDataURL("image/png");
+            const base64 = image.replace("data:image/png;base64,", "");
+
+            fetch("/predict", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ image: base64 }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    document.getElementById("result").textContent =
+                        "Predicted Digit: " + data.prediction;
+                })
+                .catch((error) => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>
