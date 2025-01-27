@@ -40,7 +40,7 @@ app = Flask(__name__)
 # Load model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = SimpleCNN(input_size=784, hidden_size=500, num_classes=10).to(device)
-model.load_state_dict(torch.load("model.pth", map_location=device))
+model.load_state_dict(torch.load("lab1(CNN)/model.pth", map_location=device))
 model.eval()
 
 
