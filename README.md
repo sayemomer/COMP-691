@@ -2,7 +2,7 @@
 
 This document provides a brief overview of various neural network architectures and their components. Below are descriptions and corresponding images for each architecture, including dimensionality changes for an example input where applicable.
 
-#Summary
+## `Summary
 
 1. [Simple MLP](#simple-mlp)
 2. [MLP with Batch Normalization](#mlp-with-batch-normalization)
