@@ -2,6 +2,19 @@
 
 This document provides a brief overview of various neural network architectures and their components. Below are descriptions and corresponding images for each architecture, including dimensionality changes for an example input where applicable.
 
+#Summary
+
+1. [Simple MLP](#simple-mlp)
+2. [MLP with Batch Normalization](#mlp-with-batch-normalization)
+3. [MLP with Batch Normalization and Dropout](#mlp-with-batch-normalization-and-dropout)
+4. [CNN frontend and MLP with Batch Normalization and Dropout](#cnn-frontend-and-mlp-with-batch-normalization-and-dropout)
+5. [Convolutional Neural Network (CNN)](#convolutional-neural-network-cnn)
+6. [XVector-MLP](#xvector-mlp)
+7. [CNN-GRU Architecture](#cnn-gru-architecture)
+8. [CNN Encoder-Decoder](#cnn-encoder-decoder)
+9. [Encoder-MLP](#encoder-mlp)
+10. [Frozen Encoder with MLP](#frozen-encoder-with-mlp)
+
 ## Simple MLP
 ![Simple MLP](images/MLP.png)
 A basic MLP architecture consisting of linear layers and activation functions. It is used for tasks like digit classification.
