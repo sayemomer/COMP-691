@@ -14,6 +14,9 @@ This document provides a brief overview of various neural network architectures 
 8. [CNN Encoder-Decoder](#cnn-encoder-decoder)
 9. [Encoder-MLP](#encoder-mlp)
 10. [Frozen Encoder with MLP](#frozen-encoder-with-mlp)
+11. [Vanilla RNN](#vanilla-rnn)
+12. [RNN with Attention Muli-layer Perceptron (MLP)](#rnn-with-attention-multi-layer-perceptron-mlp)
+13. [RNN with Gated Recurrent Unit (GRU)](#rnn-with-gated-recurrent-unit-gru)
 
 ## Simple MLP
 ![Simple MLP](images/MLP.png)
@@ -122,5 +125,21 @@ A pre-trained frozen encoder is used to extract features, which are then passed 
 | MLP Layer           | Fully connected layer  | (Batch size, Features)      | (Batch size, Classes)       | Performs final classification                     |
 
 ---
+
+## Vanilla RNN
+![Vanilla RNN](images/Vanilla-RNN.png)
+A simple RNN architecture with recurrent connections that allow information to persist over time. It is used for sequential data processing tasks.
+![Vanilla RNN Dimenstion](images/Vanilla-RNN-Dim.png)
+
+## RNN with Attention Multi-layer Perceptron (MLP)
+![RNN Attention MLP](images/RNN-Attention-MLP.png)
+An RNN architecture with an attention mechanism that focuses on relevant parts of the input sequence. The attention weights are computed using an MLP.
+![RNN Attention MLP Dimenstion](images/RNN-Attention-MLP-Dim.png)
+![RNN Attention MLP Summmary](images/RNN-Attention-MLP-Sum.png)
+
+## RNN with Gated Recurrent Unit (GRU)
+![RNN GRU](images/RNN-GRU.png)
+An RNN architecture with GRU cells that have gating mechanisms to control the flow of information. It helps in capturing long-range dependencies in sequential data.
+![RNN GRU Dimenstion](images/RNN-GRU-Sum.png)
 
 Feel free to edit this README to include more details or customize the descriptions.
