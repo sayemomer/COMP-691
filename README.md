@@ -17,6 +17,8 @@ This document provides a brief overview of various neural network architectures 
 11. [Vanilla RNN](#vanilla-rnn)
 12. [RNN with Attention Muli-layer Perceptron (MLP)](#rnn-with-attention-multi-layer-perceptron-mlp)
 13. [RNN with Gated Recurrent Unit (GRU)](#rnn-with-gated-recurrent-unit-gru)
+14. [Encoder-Decoder with Attention MLP](#encoder-decoder-with-attention-mlp)
+15. [Transformer](#transformer)
 
 ## Simple MLP
 ![Simple MLP](images/MLP.png)
@@ -141,5 +143,24 @@ An RNN architecture with an attention mechanism that focuses on relevant parts o
 ![RNN GRU](images/RNN-GRU.png)
 An RNN architecture with GRU cells that have gating mechanisms to control the flow of information. It helps in capturing long-range dependencies in sequential data.
 ![RNN GRU Dimenstion](images/RNN-GRU-Sum.png)
+
+## Encoder-Decoder with Attention MLP
+![Encoder-Decoder Attention MLP](images/MLP-ATTNTION.png)
+An encoder-decoder architecture with an attention mechanism that focuses on relevant parts of the input sequence. The attention weights are computed using an MLP.
+![Encoder-Decoder Attention MLP Dimenstion](images/MLP-ATTENTION-sum.png)
+![Encoder-Decoder Attention MLP Summmary](images/MLP-ATTENTION-dim.png)
+
+## Transformer
+![Transformer](images/Transformer.png)
+A transformer architecture that uses self-attention mechanisms to capture long-range dependencies in sequential data. It consists of encoder and decoder layers with multi-head attention.
+![Transformer Dimenstion](images/Transformer-dim-1.png)
+![Transformer Dimenstion](images/Transformer-dim-2.png)
+![Transformer Dimenstion](images/Transformer-dim-3.png)
+![Transformer Summary](images/Transformer-sum.png)
+
+
+
+
+
 
 Feel free to edit this README to include more details or customize the descriptions.
