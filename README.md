@@ -19,6 +19,9 @@ This document provides a brief overview of various neural network architectures 
 13. [RNN with Gated Recurrent Unit (GRU)](#rnn-with-gated-recurrent-unit-gru)
 14. [Encoder-Decoder with Attention MLP](#encoder-decoder-with-attention-mlp)
 15. [Transformer](#transformer)
+16. [wev2vec](#wev2vec)
+17. [HuBERT](#hubert)
+18. [wevLM](#wevLM)
 
 ## Simple MLP
 ![Simple MLP](images/MLP.png)
@@ -158,9 +161,20 @@ A transformer architecture that uses self-attention mechanisms to capture long-r
 ![Transformer Dimenstion](images/Transformer-dim-3.png)
 ![Transformer Summary](images/Transformer-sum.png)
 
+## wev2vec
+![wev2vec](images/wev2vec.png)
+A wev2vec architecture that learns word embeddings by predicting the context of words in a sentence. It uses a skip-gram model with negative sampling for training.
+![wev2vec summary](images/wev2vec-sum.png)
 
+## HuBERT
+![HuBERT](images/HuBERT1.png)
+![HuBERT](images/HuBERT2.png)
+A HuBERT architecture that uses a transformer-based model for self-supervised learning. It leverages masked language modeling and contrastive learning to learn representations.
+![HuBERT summary](images/HuBERT-sum.png)
 
-
+## wevLM
+![wevLM](images/wevLM.png)
+A wevLM architecture that uses a transformer-based model for language modeling. It predicts the next word in a sequence given the context words.
 
 
 Feel free to edit this README to include more details or customize the descriptions.
