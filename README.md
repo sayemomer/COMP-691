@@ -2,7 +2,7 @@
 
 This document provides a brief overview of various neural network architectures and their components. Below are descriptions and corresponding images for each architecture, including dimensionality changes for an example input where applicable.
 
-## `Summary
+## Summary
 
 1. [Simple MLP](#simple-mlp)
 2. [MLP with Batch Normalization](#mlp-with-batch-normalization)
@@ -22,6 +22,13 @@ This document provides a brief overview of various neural network architectures 
 16. [wev2vec](#wev2vec)
 17. [HuBERT](#hubert)
 18. [wevLM](#wevLM)
+19. [ASR](#asr)
+20. [Beamsearch](#beam-search)
+21. [TTS](#tts)
+22. [NLU](#nlu)
+
+a) [SpeechBrain Workflow](#speechbrain-workflow)
+
 
 ## Simple MLP
 ![Simple MLP](images/MLP.png)
@@ -175,6 +182,34 @@ A HuBERT architecture that uses a transformer-based model for self-supervised le
 ## wevLM
 ![wevLM](images/wevLM.png)
 A wevLM architecture that uses a transformer-based model for language modeling. It predicts the next word in a sequence given the context words.
+
+## ASR
+![ASR](images/ASR1.png)
+An ASR (Automatic Speech Recognition) architecture that uses a combination of convolutional layers and recurrent layers to transcribe spoken language into text. The model processes audio features and generates a sequence of text tokens.
+![ASR](images/ASR2.png)
+![ASR](images/ASR-sum.png)
+
+
+## Beam Search
+![Beam Search](images/Beam-Search.png)
+A beam search architecture that is used in sequence-to-sequence models for generating text. It maintains a fixed number of candidate sequences (beam width) during decoding to find the most likely output sequence.
+
+## TTS
+![TTS](images/TTS.png)
+A TTS (Text-to-Speech) architecture that converts text input into speech output. It uses a combination of convolutional layers and recurrent layers to generate audio waveforms from text sequences.
+
+## NLU
+![nlu](images/NLU1.png)
+![nlu](images/NLU2.png)
+An NLU (Natural Language Understanding) architecture that uses an encoder-decoder structure. The encoder processes the input text to extract meaningful representations, while the decoder generates outputs such as intent classification, entity recognition, or other language understanding tasks. This architecture is commonly used in conversational AI and NLP applications.
+![nlu summary](images/NLU-sum.png)
+
+
+
+
+## SpeechBrain Workflow
+![SpeechBrain Workflow](images/SpeechBrain-Workflow.png)
+The SpeechBrain workflow illustrates the end-to-end process of building and training a speech processing model. It includes data preprocessing, feature extraction, model training, and evaluation stages. The workflow is designed to be modular and flexible, allowing users to customize each component according to their specific needs.
 
 
 Feel free to edit this README to include more details or customize the descriptions.
