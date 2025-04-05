@@ -26,7 +26,7 @@ This document provides a brief overview of various neural network architectures 
 20. [Beamsearch](#beam-search)
 21. [TTS](#tts)
 22. [NLU](#nlu)
-23. [GLM] (#glm)
+23. [GLM](#glm)
 
 
 a) [SpeechBrain Workflow](#speechbrain-workflow)
