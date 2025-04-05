@@ -26,6 +26,8 @@ This document provides a brief overview of various neural network architectures 
 20. [Beamsearch](#beam-search)
 21. [TTS](#tts)
 22. [NLU](#nlu)
+23. [GLM] (#glm)
+
 
 a) [SpeechBrain Workflow](#speechbrain-workflow)
 
@@ -203,6 +205,12 @@ A TTS (Text-to-Speech) architecture that converts text input into speech output.
 ![nlu](images/NLU2.png)
 An NLU (Natural Language Understanding) architecture that uses an encoder-decoder structure. The encoder processes the input text to extract meaningful representations, while the decoder generates outputs such as intent classification, entity recognition, or other language understanding tasks. This architecture is commonly used in conversational AI and NLP applications.
 ![nlu summary](images/NLU-sum.png)
+
+## GLM
+![glm](images/GLM.png)
+A GLM (Generalized Language Model) architecture that uses a transformer-based model for language modeling tasks. It is designed to handle various NLP tasks such as text generation, summarization, and question answering.
+![glm summary](images/GLM-sum.png)
+![glm summary](images/GLM-sum-2.png)
 
 
 
